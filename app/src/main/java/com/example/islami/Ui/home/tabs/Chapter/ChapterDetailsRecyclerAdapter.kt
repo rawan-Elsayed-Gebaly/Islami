@@ -1,36 +1,31 @@
-package com.example.islami.Ui.home.tabs.quran
+package com.example.islami.Ui.home.tabs.Chapter
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import androidx.viewbinding.ViewBinding
-import com.example.islami.R
 import com.example.islami.databinding.SuraDetailsBinding
-import java.io.IOException
+import com.example.islami.databinding.SuraRecyclerViewBinding
 
-class ChapterDetailsRecyclerAdapter(private val context:Context) :
+class ChapterDetailsRecyclerAdapter( val suraList :List<String>) :
     RecyclerView.Adapter<ChapterDetailsRecyclerAdapter.viewHolder>() {
 
 
-    class viewHolder(val viewBinding: ViewBinding)
+    class viewHolder( val viewBinding: SuraRecyclerViewBinding)
         :RecyclerView.ViewHolder(viewBinding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
-        val viewBinding = SuraDetailsBinding
+        val viewBinding = SuraRecyclerViewBinding
             .inflate(LayoutInflater.from(parent.context), parent , false)
 
         return viewHolder(viewBinding)
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount(): Int = suraList.size
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
-
+        holder.viewBinding.suraContent.text = suraList[position]
 
     }
 }

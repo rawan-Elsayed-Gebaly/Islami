@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Ui.home.tabs.quran.SuraDetailsActivity"/>
+        <activity android:name=".Ui.home.tabs.Chapter.SuraDetailsActivity"/>
     </application>
 
 </manifest>
