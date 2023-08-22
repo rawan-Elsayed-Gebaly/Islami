@@ -28,6 +28,9 @@
         </activity>
 
         <activity android:name=".Ui.home.tabs.Chapter.SuraDetailsActivity"/>
+
+        <activity android:name=".Ui.home.tabs.hadeth.hadethContent.HadethContentActivity"/>
+
     </application>
 
 </manifest>

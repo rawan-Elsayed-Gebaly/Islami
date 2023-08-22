@@ -165,4 +165,6 @@ class QuranFragment:Fragment(){
         startActivity(intent)
     }
 
+
+
 }

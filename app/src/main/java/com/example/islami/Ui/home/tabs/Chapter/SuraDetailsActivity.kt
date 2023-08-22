@@ -20,9 +20,6 @@ class SuraDetailsActivity :AppCompatActivity (){
         loadChapterFile()
         initSuraTitle()
         backArrow()
-
-
-
          }
 
     private fun backArrow() {
@@ -41,15 +38,13 @@ class SuraDetailsActivity :AppCompatActivity (){
     private fun initParams() {
         chapterIndex = intent.getIntExtra(Constants.EXTRA_CHAPTER_INDEX , 0)
         chapterName  =  intent.getStringExtra(Constants.EXTRA_CHAPTER_NAME)?:""
-
     }
-
-
 
     private fun loadChapterFile() {
         // will return the all file in string
         val fileContent =   assets.open("$chapterIndex.txt").bufferedReader().use { it.readText() }
         val lines = fileContent.trim().split("\n")
+
         bindVerses(lines)
     }
 
