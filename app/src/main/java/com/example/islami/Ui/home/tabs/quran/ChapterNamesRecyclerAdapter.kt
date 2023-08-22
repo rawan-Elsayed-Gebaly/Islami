@@ -32,4 +32,6 @@ class ChapterNamesRecyclerAdapter( private  val chapterName:List<String>) : Recy
         }
     }
 
+
+
 }

@@ -2,19 +2,18 @@ package com.example.islami.Ui.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.example.islami.R
-import com.example.islami.Ui.home.tabs.hadeth.HadethFragment
+import com.example.islami.Ui.home.tabs.hadeth.hadethFragment.HadethFragment
 import com.example.islami.Ui.home.tabs.quran.QuranFragment
 import com.example.islami.Ui.home.tabs.radio.RadioFragment
 import com.example.islami.Ui.home.tabs.tasbeh.TasbehFragment
 import com.example.islami.databinding.ActivityHomeBinding
-import com.google.android.material.navigation.NavigationBarView
 
 class HomeActivity : AppCompatActivity() {
 
     lateinit var viewBinding :ActivityHomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewBinding = ActivityHomeBinding.inflate(layoutInflater)
@@ -37,6 +36,8 @@ class HomeActivity : AppCompatActivity() {
             true
         }
         viewBinding.content.bottomNav.selectedItemId = R.id.navigation_quran
+
+
     }
 
 
@@ -46,5 +47,11 @@ class HomeActivity : AppCompatActivity() {
             .replace(R.id.fragment_container , fragment )
             .commit()
     }
+
+
+
+
+  //todo  fun getHadethName(single_Hadeth :String) : String {
+
 
 }
